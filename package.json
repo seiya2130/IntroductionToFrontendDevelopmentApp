@@ -1,0 +1,15 @@
+{
+  "name": "IntroductionToFrontendDevelopmentApp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/seiya2130/IntroductionToFrontendDevelopmentApp.git",
+  "author": "Seiya_Satoh <satohseiya0312@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "scripts": {
+    "build": "webpack"
+  }
+}
