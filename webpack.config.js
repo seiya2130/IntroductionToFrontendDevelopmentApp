@@ -10,7 +10,8 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                //.jsまたは.tsを対象とする
+                test: /\.(j|t)s$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
