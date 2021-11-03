@@ -1,12 +1,6 @@
 import $ from 'jquery'
-
-type Book = {
-    title: string,
-    image: string,
-    author: string,
-    overview: string
-}
-
+import appendBook from './appendBook'
+import Book from './Book'
 
 $(function() {
     let books = [
@@ -23,24 +17,6 @@ $(function() {
             overview: "読みやすく、理解しやすいコードを書くためのテクニックが詰まっています。"
         },
     ]
-
-    function appendBook(book: Book){
-        $("#js-book-list").append($(
-            "<li>" + 
-                "<div>" +
-                    "<img src='" + book.image + "' alt='" + book.title + "'>" +
-                    "<div>" +
-                        "<div>" +
-                            "<h3>" + book.title +
-                                "<span>(" + book.author + ")</span>" +
-                            "</h3>" +
-                            "<p>" + book.overview + "</p>" +
-                        "</div>" +
-                    "</div>" +
-                "</div>" +
-            "</li>"
-        ))  
-    }
 
     books.forEach(book => appendBook(book));
     $("#js-add-book").on("click", function(){
