@@ -1,5 +1,13 @@
 import $ from 'jquery'
 
+type Book = {
+    title: string,
+    image: string,
+    author: string,
+    overview: string
+}
+
+
 $(function() {
     let books = [
         {
@@ -16,7 +24,7 @@ $(function() {
         },
     ]
 
-    function appendBook(book){
+    function appendBook(book: Book){
         $("#js-book-list").append($(
             "<li>" + 
                 "<div>" +
@@ -35,16 +43,17 @@ $(function() {
     }
 
     books.forEach(book => appendBook(book));
-
     $("#js-add-book").on("click", function(){
-        let book = {
+
+        let newBook: Book = {
             title: "",
-            image: "",
+            image:  "",
             author: "",
             overview: ""
-        }
-        book.title = $("add-book-form").find("#id").val();
-        books.push(book);
-        books.forEach(book => appendBook(book));
+        };
+
+        newBook.title = <string>$("add-book-form").find("#id").val();
+        books.push(newBook);
+        books.forEach(newBook => appendBook(newBook));
     })
 });
