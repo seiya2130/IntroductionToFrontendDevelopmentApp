@@ -1,6 +1,6 @@
-import $ from 'jquery'
-import appendBook from './appendBook'
-import Book from './Book'
+import $ from 'jquery';
+import appendBook from './appendBook';
+import Book from './Book';
 
 $(function() {
     let books = [
@@ -16,7 +16,7 @@ $(function() {
             author: "Dustin Boswell・Trevor Founcher 訳 角 征典",
             overview: "読みやすく、理解しやすいコードを書くためのテクニックが詰まっています。"
         },
-    ]
+    ];
 
     books.forEach(book => appendBook(book));
     $("#js-add-book").on("click", function(){
@@ -31,5 +31,5 @@ $(function() {
         newBook.title = <string>$("add-book-form").find("#id").val();
         books.push(newBook);
         books.forEach(newBook => appendBook(newBook));
-    })
+    });
 });
