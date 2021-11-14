@@ -1,4 +1,4 @@
-import $ from 'jquery'
+import $ from 'jquery';
 import Book from './Book';
 
 export default function appendBook(book: Book){
@@ -17,4 +17,4 @@ export default function appendBook(book: Book){
             "</div>" +
         "</li>"
     ));
-}
+};

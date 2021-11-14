@@ -3,4 +3,4 @@ export default interface Book {
     image: string,
     author: string,
     overview: string
-}
+};
